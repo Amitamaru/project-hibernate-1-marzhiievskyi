@@ -5,6 +5,11 @@ import org.springframework.lang.NonNull;
 
 import java.util.Date;
 
+@org.hibernate.annotations.NamedQueries({
+        @org.hibernate.annotations.NamedQuery(name = "Player_getAllCount",
+                query = "select count (pl) from Player pl")
+})
+
 @Entity
 @Table(schema = "rpg", name = "player")
 public class Player {
